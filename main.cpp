@@ -4,5 +4,16 @@
 #include "funcs.h"
 
 int main(){
-    std::cout << removeLeadingSpaces("                int main(){\n           // Hi, I'm a program!\nint x = 1;\n    for(int i = 0; i < 10; i++) {\ncout << i;\n          cout << endl;\n }\n    }") << std::endl;
+    
+    std::string line = "";
+    std::string scrambled = "";
+
+    while(getline(std::cin, line)){
+        scrambled += format(line);
+    }
+
+    std::cout << scrambled << std::endl;
+
+    // std::string ex = "       Example";
+    // std::cout<<removeLeadingSpaces(ex) << " " << countChar(ex, 'e') << indent(ex, 3) << std::endl;
 }
