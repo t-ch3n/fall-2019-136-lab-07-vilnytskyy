@@ -1,27 +1,63 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-#include <vector>
-//task a
-std::string removeLeadingSpaces(std::string line)
-{
-    std::string result = "";
 
-    //std::vector<int> pos;
+// task a - again
 
-    bool nspace = true;
+std::string removeLeadingSpaces(std::string line){
+    //std::string result="";
 
-    for(int i=0; i<line.size(); i++){
-        if(nspace&&!isspace(line[i])){
-            result+=line[i];
-            nspace = false;
-        }else if(line[i]=='\n'){
-            result+=line[i];
-            nspace =true;
-        }else if(!nspace){
-            result+=line[i];
+    int i = 0;
+    while(isspace(line[i])){
+        i++;
+    }
+
+    return line.substr(i);
+}
+
+//task b
+
+int countChar(std::string line, char c){
+    int count=0;
+
+    for(int i=0; i<line.size();i++){
+        if(line[i]==c){
+            count++;
         }
     }
 
-    return result;
+    return count;
+}
+
+std::string indent(std::string line, int n){
+    std::string result = "";
+
+    for(int i =0; i<n;i++ ){
+        result+='\t';
+    }
+
+    return result + line;
+}
+
+std::string format(std::string line){
+    line = removeLeadingSpaces(line);
+
+    std::string result = "";
+
+    static int count = 0;
+
+    //std::cout<<count<<std::endl;
+
+    if(countChar(line, '{')==1){
+        result = indent(line, count);
+        count++;
+    }else if(countChar(line, '}')==1){
+        result = indent(line, count-1);
+        count--;
+    }else{
+        result = indent(line, count);
+    }
+
+    return result+'\n';
+    
 }
