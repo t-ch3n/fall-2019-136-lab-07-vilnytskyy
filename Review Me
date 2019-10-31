@@ -1,0 +1,16 @@
+Vasyl Ilnytskyy Code Review by David Cai
+
+    The code overall is well written with clean stylization and good use
+of a while loop in Task A, making it much more efficent than that of a for
+loop. While comments would be nice throughout the code, the structure of it
+is written in a manner that makes it easy to understand.
+
+    There are potential more methods of testing to see if the code is working
+in all cases, but the provided example is more than enough to see that it's
+fully working. There could be more use of the test file but that seems unnecessary
+due to the nature of the lab.
+
+    There is not much to say as the code works well and it's done in an efficent
+matter, I would grade it at a 10/10 in terms of grading and will be referring to
+this in the future for anything relating to reformating a text file as they have
+done it in a very clear matter for me to refer to as a good basis.
