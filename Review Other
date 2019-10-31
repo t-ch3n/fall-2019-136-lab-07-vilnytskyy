@@ -1,0 +1,29 @@
+David Cai Code Review by Vasyl Ilnytskyy
+
+    David's code lacks formatting making it tough to read and understand.
+His code also does not accomplish everything set out in this lab.
+
+    The removeLeadingSpaces function David coded also only partially works
+when the input is a string containing a single word as any string with multiple
+words only returns the first word.
+
+    I recommend David to find a coding style guide, like the one linked on the
+CSCI 135 website, to keep his workspace formatted and easy to assess. Additionally,
+I suggest David to create more tests for the functions he creates so he can build
+and improve upon them as he works through the lab. Finally, I recommend that if David
+finds a fault in his code that he comment it out instead of deleting it (ie indent)
+so that he has reference to what he can improve and move on from.
+
+Rachel Ng Code Review by Vasyl Ilnytskyy
+
+    Rachel's code is a well formatted and unqie approach to this lab with the 
+inclusion of functions recieveInput and recieveFile. Both functions aid Rachel in
+successfully coding this lab in a "I didn't think of that" way.
+
+    Rachel's code is to the point in the sense that you can easily infer the 
+purpose of her code but informative comments would be appreciated. The effort she
+put in to create multiple test cases for her main functions I infered to have
+helped her code this lab.
+
+    Overall, Rachel's code precisely executed the challenges of this lab while
+introducing an alternative route in which to successfully code this lab.
