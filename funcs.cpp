@@ -18,10 +18,14 @@ std::string removeLeadingSpaces(std::string line){
 //task b
 
 int countChar(std::string line, char c){
+    bool isString = false;
     int count=0;
 
     for(int i=0; i<line.size();i++){
-        if(line[i]==c){
+        if (line[i]=='"'){
+            isString = !isString;
+        }
+        if(!isString&&line[i]==c){
             count++;
         }
     }
@@ -59,5 +63,5 @@ std::string format(std::string line){
     }
 
     return result+'\n';
-    
+
 }
