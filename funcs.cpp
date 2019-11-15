@@ -49,6 +49,7 @@ std::string format(std::string line){
     std::string result = "";
 
     static int count = 0;
+    static std::string previous = "";
 
     //std::cout<<count<<std::endl;
 
@@ -58,10 +59,23 @@ std::string format(std::string line){
     }else if(countChar(line, '}')==1){
         result = indent(line, count-1);
         count--;
+    }else if(line.find("if", 0) != std::string::npos){ //if the word if is found
+        result = indent(line ,count);
+        count ++;
+    }
+    else if(line.find("else", 0) != std::string::npos){ //if the word else is found
+        result = indent(line ,count);
+        count ++;
+    }else if(previous.find("if", 0) != std::string::npos || previous.find("else", 0) != std::string::npos){ 
+        result = indent(line ,count);
+        count --;
     }else{
         result = indent(line, count);
     }
 
+    previous = line;
+
     return result+'\n';
 
 }
+
